@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 //Model
-import SoundBok from "./Soundbok/Soundboks";
+import SoundBok from "./Soundbok/Soundbok";
 
 const Experience = () => {
     const { position } = useControls({
