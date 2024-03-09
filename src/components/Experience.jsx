@@ -15,7 +15,7 @@ const SoundBoks = ({ z }) => {
     const bokRef = useRef();
     const { viewport, camera } = useThree();
 
-    const { width, height } = viewport.getCurrentViewport(camera, [0, 0, -z]);
+    const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z]);
 
     const [data] = useState({
         x: THREE.MathUtils.randFloatSpread(2),
@@ -30,10 +30,10 @@ const SoundBoks = ({ z }) => {
         // const angle = state.clock.getElapsedTime();
         // bokRef.current.position.x += Math.sin(angle) * delta;
         // bokRef.current.position.z += Math.cos(angle) * delta;
-        bokRef.current.rotation.set((data.rX += 0.001), (data.rY += 0.004), (data.rZ += 0.0005));
-        bokRef.current.position.set(data.x * width, (data.y += 0.02), -z);
-        if (data.y > height / 1) {
-            data.y = -height / 1;
+        bokRef.current.rotation.set((data.rX += 0.01), (data.rY += 0.008), (data.rZ += 0.005));
+        bokRef.current.position.set(data.x * width, (data.y += 0.025), z);
+        if (data.y > height) {
+            data.y = -height;
         }
     });
 
@@ -44,7 +44,7 @@ const SoundBoks = ({ z }) => {
     );
 };
 
-const Experience = ({ count = 500 }) => {
+const Experience = ({ count = 100, depth = 80 }) => {
     //Leva
     const { position } = useControls({
         position: {
@@ -61,10 +61,10 @@ const Experience = ({ count = 500 }) => {
         <>
             {/* <OrbitControls makeDefault /> */}
             {Array.from({ length: count }, (_, i) => (
-                <SoundBoks key={i} z={i} />
+                <SoundBoks key={i} z={-(i / count) * depth - 10} />
             ))}
             <EffectComposer>
-                <DepthOfField target={[0, 0, 10]} focalLength={0.5} bokehScale={11} height={700} />
+                <DepthOfField target={[0, 0, depth / 2]} focalLength={0.5} bokehScale={10} height={700} />
             </EffectComposer>
         </>
     );

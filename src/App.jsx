@@ -18,7 +18,7 @@ function App() {
                         alpha: false,
                         antialias: true,
                     }}
-                    camera={{ near: 0.01, far: 110 }}
+                    camera={{ near: 0.01, far: 110, fov: 30 }}
                 >
                     <color attach='background' args={["#FBFEFF"]} />
                     <spotLight position={[10, 10, 10]} intensity={4.5} />
