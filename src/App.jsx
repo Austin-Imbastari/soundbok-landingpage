@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import { StrictMode } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Environment } from "@react-three/drei";
+import Overlay from "./components/Overlay/Overlay";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Environment preset='city' />
                     </Suspense>
                 </Canvas>
+                <Overlay />
             </StrictMode>
         </>
     );

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import styled from "styled-components";
 
@@ -6,19 +7,29 @@ const Navbar = () => {
         <>
             <NavContainer>
                 <h1>
-                    <i>SOUNDBOKS</i>
+                    <a href='#'>
+                        <i>SOUNDBOKS</i>
+                    </a>
                 </h1>
 
                 <LinkList>
                     <ul>
-                        <li>Story</li>
-                        <li>Pricing</li>
-                        <li>About</li>
+                        <a href='#'>
+                            <li>Story</li>
+                        </a>
+                        <a href='#'>
+                            <li>Pricing</li>
+                        </a>
+                        <a href='#'>
+                            <li>About</li>
+                        </a>
                     </ul>
                 </LinkList>
 
                 <div>
-                    <button>Purchase</button>
+                    <a href='https://soundboks.com/?gad_source=1&gclid=CjwKCAiAi6uvBhADEiwAWiyRdoNl9lEMOjCl2P9rNjiROIiccB1Y64CB8bhn4NA1ywGNNAuauChaBRoCYkcQAvD_BwE'>
+                        <button>Purchase</button>
+                    </a>
                 </div>
             </NavContainer>
         </>
@@ -41,6 +52,13 @@ const NavContainer = styled.div`
     h1 {
         font-size: 2rem;
         font-weight: 900;
+        color: #2d2928;
+        text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
+
+        a {
+            text-decoration: none;
+            color: #2d2928;
+        }
     }
 
     button {
@@ -72,7 +90,13 @@ const LinkList = styled.div`
         color: #2d2928;
         font-size: 1.2rem;
         letter-spacing: 1.2px;
-        font-weight: 300;
+        font-weight: 600;
+        /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
+
+        a {
+            text-decoration: none;
+            color: #2d2928;
+        }
     }
 `;
 
