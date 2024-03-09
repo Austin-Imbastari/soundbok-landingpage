@@ -25,6 +25,9 @@ const Overlay = () => {
                 </Arrow>
                 <Logo />
             </BottomRight>
+            <BottomLeft>
+                <p>Whenever and wherever you want to party, SOUNDBOKS has you covered.</p>
+            </BottomLeft>
         </>
     );
 };
@@ -81,4 +84,17 @@ export const BottomRight = styled.div`
     width: 95ch;
     max-width: 40%;
     text-align: right;
+`;
+
+export const BottomLeft = styled.div`
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    max-width: 40%;
+
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
 `;
