@@ -23,13 +23,14 @@ function App() {
                         antialias: true,
                     }}
                     camera={{ near: 0.01, far: 110, fov: 30 }}
+                    pr={[1, 1.5]}
                 >
                     <color attach='background' args={["#FBFEFF"]} />
-                    <spotLight position={[10, 10, 10]} intensity={4.5} />
-                    <ambientLight intensity={2.5} />
+                    <spotLight position={[10, 10, 10]} intensity={4} />
+                    <ambientLight intensity={2} />
                     <Suspense fallback={null}>
                         <Experience speed={speed} />
-                        <Environment preset='city' />
+                        <Environment preset='studio' />
                     </Suspense>
                 </Canvas>
                 <Overlay />

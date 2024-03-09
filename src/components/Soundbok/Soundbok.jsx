@@ -10,7 +10,7 @@ function SoundBok({ ...props }) {
         <group {...props} dispose={null}>
             <group position={[-0.058, 1.039, -0.027]} scale={[1, 1, 1.836]}>
                 <mesh geometry={nodes.Cube_1.geometry} material={materials.basematerial} />
-                <mesh geometry={nodes.Cube_2.geometry} material={materials.strapmaterial} material-color='white' />
+                <mesh geometry={nodes.Cube_2.geometry} material={materials.strapmaterial} />
                 <mesh geometry={nodes.Cube_3.geometry} material={materials.volumeknobmaterial} />
                 <mesh geometry={nodes.Cube_4.geometry} material={materials.volumeringmaterial} />
                 <mesh geometry={nodes.Cube_5.geometry} material={materials.bluetoothmaterial} />
@@ -32,7 +32,11 @@ function SoundBok({ ...props }) {
             </group>
             <group position={[1.098, 1.023, -0.701]} scale={[1, 1, 1.836]}>
                 <mesh geometry={nodes.OuterGrill_1.geometry} material={materials.basematerial} />
-                <mesh geometry={nodes.OuterGrill_2.geometry} material={materials.outergrillmaterial} />
+                <mesh
+                    geometry={nodes.OuterGrill_2.geometry}
+                    material={materials.outergrillmaterial}
+                    material-color='black'
+                />
             </group>
         </group>
     );

@@ -57,7 +57,6 @@ const Experience = ({ count = 20, depth = 80, speed }) => {
 
     return (
         <>
-            {/* <OrbitControls makeDefault /> */}
             {Array.from({ length: count }, (_, i) => (
                 <SoundBoks speed={speed} key={i} z={-(i / count) * depth - 10} index={i} />
             ))}
