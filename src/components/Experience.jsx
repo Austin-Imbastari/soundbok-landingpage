@@ -35,10 +35,10 @@ const Experience = () => {
             <mesh rotation={[0, -Math.PI * 0.5, 0]} position={[0, -1, 0]}>
                 <SoundBok />
             </mesh>
-            <mesh ref={bokRef} position={[position.x, position.y, position.z]}>
+            {/* <mesh ref={bokRef} position={[position.x, position.y, position.z]}>
                 <boxGeometry />
                 <meshStandardMaterial color='yellow' />
-            </mesh>
+            </mesh> */}
         </>
     );
 };
