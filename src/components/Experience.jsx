@@ -43,7 +43,7 @@ const SoundBoks = ({ z, speed }) => {
     );
 };
 
-const Experience = ({ count = 100, depth = 80, speed }) => {
+const Experience = ({ count = 20, depth = 80, speed }) => {
     //Leva
     const { position } = useControls({
         position: {
@@ -63,7 +63,7 @@ const Experience = ({ count = 100, depth = 80, speed }) => {
                 <SoundBoks speed={speed} key={i} z={-(i / count) * depth - 10} index={i} />
             ))}
             <EffectComposer>
-                <DepthOfField target={[0, 0, depth / 2]} focalLength={0.5} bokehScale={10} height={700} />
+                <DepthOfField target={[0, 0, depth / 2]} focalLength={0.8} bokehScale={14} height={700} />
             </EffectComposer>
         </>
     );

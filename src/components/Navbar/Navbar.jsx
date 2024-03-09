@@ -27,7 +27,7 @@ const Navbar = () => {
                 </LinkList>
 
                 <div>
-                    <a href='https://soundboks.com/?gad_source=1&gclid=CjwKCAiAi6uvBhADEiwAWiyRdoNl9lEMOjCl2P9rNjiROIiccB1Y64CB8bhn4NA1ywGNNAuauChaBRoCYkcQAvD_BwE'>
+                    <a target='_blank' href='https://soundboks.com/products/speakers/soundboks-go'>
                         <button>Purchase</button>
                     </a>
                 </div>
