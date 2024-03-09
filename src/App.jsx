@@ -23,7 +23,7 @@ function App() {
                         antialias: true,
                     }}
                     camera={{ near: 0.01, far: 110, fov: 30 }}
-                    pr={[1, 1.5]}
+                    dpr={[1, 1.5]}
                 >
                     <color attach='background' args={["#FBFEFF"]} />
                     <spotLight position={[10, 10, 10]} intensity={4} />
@@ -37,12 +37,13 @@ function App() {
                 <LeftMiddle>
                     <input
                         type='range'
-                        min='1'
+                        min='.1'
                         max='3'
                         value={speed}
                         step='.05'
                         onChange={(e) => setSpeed(Number(e.target.value))}
                     />
+                    <div>{speed}</div>
                 </LeftMiddle>
                 <Configure />
             </StrictMode>

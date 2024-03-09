@@ -44,16 +44,16 @@ const SoundBoks = ({ z, speed }) => {
 
 const Experience = ({ count = 20, depth = 80, speed }) => {
     //Leva
-    const { position } = useControls({
-        position: {
-            value: {
-                x: 0,
-                y: 0,
-                z: 0,
-            },
-            step: 0.01,
-        },
-    });
+    // const { position } = useControls({
+    //     position: {
+    //         value: {
+    //             x: 0,
+    //             y: 0,
+    //             z: 0,
+    //         },
+    //         step: 0.01,
+    //     },
+    // });
 
     return (
         <>
