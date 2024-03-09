@@ -10,6 +10,7 @@ import Overlay from "./components/Overlay/Overlay";
 import styled from "styled-components";
 
 function App() {
+    const [speed, setSpeed] = useState(0.5);
     return (
         <>
             <StrictMode>
@@ -26,13 +27,20 @@ function App() {
                     <spotLight position={[10, 10, 10]} intensity={4.5} />
                     <ambientLight intensity={2.5} />
                     <Suspense fallback={null}>
-                        <Experience />
+                        <Experience speed={speed} />
                         <Environment preset='city' />
                     </Suspense>
                 </Canvas>
                 <Overlay />
                 <LeftMiddle>
-                    <input type='range' min='0' max='10' step='1' />
+                    <input
+                        type='range'
+                        min='1'
+                        max='3'
+                        value={speed}
+                        step='.05'
+                        onChange={(e) => setSpeed(Number(e.target.value))}
+                    />
                 </LeftMiddle>
             </StrictMode>
         </>
@@ -43,7 +51,6 @@ export const LeftMiddle = styled.div`
     position: absolute;
     bottom: 25%;
     right: 5vw;
-    font-family: "Inter";
     font-weight: 400;
     line-height: 1em;
     letter-spacing: -0.01em;

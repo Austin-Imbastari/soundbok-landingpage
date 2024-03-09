@@ -7,11 +7,10 @@ import { useControls } from "leva";
 import { OrbitControls } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
-
 //Model
 import SoundBok from "./Soundbok/Soundbok";
 
-const SoundBoks = ({ z }) => {
+const SoundBoks = ({ z, speed }) => {
     const bokRef = useRef();
     const { viewport, camera } = useThree();
 
@@ -31,7 +30,7 @@ const SoundBoks = ({ z }) => {
         // bokRef.current.position.x += Math.sin(angle) * delta;
         // bokRef.current.position.z += Math.cos(angle) * delta;
         bokRef.current.rotation.set((data.rX += 0.01), (data.rY += 0.008), (data.rZ += 0.005));
-        bokRef.current.position.set(data.x * width, (data.y += 0.025), z);
+        bokRef.current.position.set(data.x * width, (data.y += speed / 10), z);
         if (data.y > height) {
             data.y = -height;
         }
@@ -44,7 +43,7 @@ const SoundBoks = ({ z }) => {
     );
 };
 
-const Experience = ({ count = 100, depth = 80 }) => {
+const Experience = ({ count = 100, depth = 80, speed }) => {
     //Leva
     const { position } = useControls({
         position: {
@@ -61,7 +60,7 @@ const Experience = ({ count = 100, depth = 80 }) => {
         <>
             {/* <OrbitControls makeDefault /> */}
             {Array.from({ length: count }, (_, i) => (
-                <SoundBoks key={i} z={-(i / count) * depth - 10} />
+                <SoundBoks speed={speed} key={i} z={-(i / count) * depth - 10} index={i} />
             ))}
             <EffectComposer>
                 <DepthOfField target={[0, 0, depth / 2]} focalLength={0.5} bokehScale={10} height={700} />
