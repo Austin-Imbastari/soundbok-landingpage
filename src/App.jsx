@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { Environment } from "@react-three/drei";
 import Overlay from "./components/Overlay/Overlay";
 import styled from "styled-components";
+import Configure from "./components/Configure/Configure";
 
 function App() {
     const [speed, setSpeed] = useState(0.5);
@@ -42,6 +43,7 @@ function App() {
                         onChange={(e) => setSpeed(Number(e.target.value))}
                     />
                 </LeftMiddle>
+                <Configure />
             </StrictMode>
         </>
     );

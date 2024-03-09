@@ -41,3 +41,6 @@ function SoundBok({ ...props }) {
 useGLTF.preload("/soundbok.glb");
 
 export default SoundBok;
+
+// react-colorful package
+// orbitalcontrols, contact shadows,enviuronemnt,

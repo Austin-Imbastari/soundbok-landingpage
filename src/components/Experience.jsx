@@ -13,7 +13,6 @@ import SoundBok from "./Soundbok/Soundbok";
 const SoundBoks = ({ z, speed }) => {
     const bokRef = useRef();
     const { viewport, camera } = useThree();
-
     const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z]);
 
     const [data] = useState({
