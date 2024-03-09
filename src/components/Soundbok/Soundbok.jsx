@@ -4,7 +4,7 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-function SoundBok(props) {
+function SoundBok({ ...props }) {
     const { nodes, materials } = useGLTF("/soundbok.glb");
     return (
         <group {...props} dispose={null}>

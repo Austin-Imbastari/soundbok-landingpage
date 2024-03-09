@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
 import { StrictMode } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import { Environment } from "@react-three/drei";
 
 function App() {
     return (
@@ -13,11 +15,18 @@ function App() {
                 <Canvas
                     flat
                     gl={{
+                        alpha: false,
                         antialias: true,
                     }}
-                    camera={{}}
+                    camera={{ near: 0.01, far: 110 }}
                 >
-                    <Experience />
+                    <color attach='background' args={["#FBFEFF"]} />
+                    <spotLight position={[10, 10, 10]} intensity={4.5} />
+                    <ambientLight intensity={2.5} />
+                    <Suspense fallback={null}>
+                        <Experience />
+                        <Environment preset='city' />
+                    </Suspense>
                 </Canvas>
             </StrictMode>
         </>
