@@ -37,12 +37,13 @@ function SoundBok(props) {
                     onPointerDown={(e) => {
                         // Handle click event for this mesh
                         e.stopPropagation();
-                        state.current = null;
+                        state.current = "body";
                     }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_1.geometry}
                     material={materials.basematerial}
+                    material-color={snap.items.body}
                 />
 
                 <group>
@@ -67,6 +68,11 @@ function SoundBok(props) {
                         material={materials.volumeringmaterial}
                     />
                     <mesh
+                        onPointerDown={(e) => {
+                            // Handle click event for this mesh
+                            e.stopPropagation();
+                            state.current = null;
+                        }}
                         receiveShadow
                         castShadow
                         geometry={nodes.Cube_5.geometry}
@@ -106,11 +112,11 @@ function SoundBok(props) {
                 position={[1.206, 1.675, 0.732]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={0.262}
-                material-color='#808080'
+                material-color={snap.items.logo}
                 onPointerDown={(e) => {
                     // Handle click event for this mesh
                     e.stopPropagation();
-                    state.current = null;
+                    state.current = "logo";
                 }}
             />
             <group position={[1.011, 1.564, 0.892]} scale={[1, 1, 1.836]}>
@@ -129,6 +135,11 @@ function SoundBok(props) {
             </group>
             <group position={[1.098, 1.023, -0.701]} scale={[1, 1, 1.836]}>
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = null;
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.OuterGrill_1.geometry}

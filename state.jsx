@@ -7,5 +7,7 @@ export const state = proxy({
         outergrillmaterial: "#000",
         innerGrill: "#000",
         volumeknobmaterial: "#000",
+        logo: "#808080",
+        body: "#000",
     },
 });
