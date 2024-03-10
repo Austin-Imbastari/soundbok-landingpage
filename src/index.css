@@ -34,3 +34,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1);
 }
+
+.click-event {
+    pointer-events: none;
+}

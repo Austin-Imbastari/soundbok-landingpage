@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.8",
     "three": "^0.162.0",
+    "valtio": "^1.13.2",
     "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {

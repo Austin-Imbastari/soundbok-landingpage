@@ -7,6 +7,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { HexColorPicker } from "react-colorful";
 import SoundBok from "../Soundbok/Soundbok";
 import styled from "styled-components";
+import { useProxy } from "valtio/utils";
+
+import { state } from "/state";
 
 const SoundBokConfig = ({ setColor, color }) => {
     const bok = useRef();
@@ -21,14 +24,31 @@ const SoundBokConfig = ({ setColor, color }) => {
     console.log(color);
     return (
         <mesh ref={bok}>
-            <SoundBok color={color} setColor={setColor} />
+            <SoundBok />
         </mesh>
     );
 };
 
-const Configure = () => {
-    const [color, setColor] = useState("#0000");
+const ColorPicker = () => {
+    const snap = useProxy(state);
 
+    return (
+        <>
+            <div>
+                <HexColorPicker
+                    className='picker'
+                    color={snap.items[snap.current]}
+                    onChange={(color) => {
+                        state.items[snap.current] = color;
+                    }}
+                />
+                <h1>{snap.current}</h1>
+            </div>
+        </>
+    );
+};
+
+const Configure = () => {
     return (
         <>
             <Canvas shadows flat>
@@ -42,12 +62,12 @@ const Configure = () => {
                 <directionalLight intensity={4} castShadow />
                 <ambientLight intensity={2.5} />
                 <Environment preset='studio' />
-                <SoundBokConfig color={color} setColor={setColor} />
-                <ContactShadows position-y={-2.5} opacity={0.4} scale={5} blur={2.4} />
+                <SoundBokConfig />
+                <ContactShadows position-y={-2.5} opacity={0.4} scale={5} blur={4.4} />
             </Canvas>
 
             <BottomRight>
-                <HexColorPicker color={color} onChange={setColor} />;
+                <ColorPicker />
             </BottomRight>
         </>
     );
