@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 
 //state management
@@ -12,6 +12,10 @@ import { state } from "/state";
 function SoundBok(props) {
     const snap = useProxy(state);
     const [hovered, setHovered] = useState(null);
+
+    useEffect(() => {
+        document.body.style.cursor = hovered ? "pointer" : "auto";
+    }, [hovered]);
 
     const { nodes, materials } = useGLTF("/soundbok.glb");
     return (

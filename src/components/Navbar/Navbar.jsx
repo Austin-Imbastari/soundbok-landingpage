@@ -18,7 +18,7 @@ const Navbar = () => {
                             <li>Story</li>
                         </a>
                         <a href='#'>
-                            <li>Pricing</li>
+                            <li>Configure</li>
                         </a>
                         <a href='#'>
                             <li>About</li>
@@ -50,6 +50,7 @@ const NavContainer = styled.div`
     z-index: 69;
 
     h1 {
+        /* border: 1px solid red; */
         font-size: 2rem;
         font-weight: 900;
         color: #2d2928;

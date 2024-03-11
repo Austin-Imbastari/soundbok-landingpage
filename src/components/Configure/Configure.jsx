@@ -34,7 +34,7 @@ const ColorPicker = () => {
 
     return (
         <>
-            <div>
+            <div style={{ display: snap.current ? "block" : "none" }}>
                 <HexColorPicker
                     className='picker'
                     color={snap.items[snap.current]}
@@ -42,7 +42,9 @@ const ColorPicker = () => {
                         state.items[snap.current] = color;
                     }}
                 />
-                <h1>{snap.current}</h1>
+                <div>
+                    <h1 className='item'>{snap.current}</h1>
+                </div>
             </div>
         </>
     );
@@ -76,7 +78,8 @@ export const BottomRight = styled.div`
     /* border: 1px solid red; */
     position: absolute;
     bottom: 5vw;
-    right: 5vw;
-    bottom: -30vh;
+    right: 10vw;
+    bottom: -60vh;
 `;
+
 export default Configure;

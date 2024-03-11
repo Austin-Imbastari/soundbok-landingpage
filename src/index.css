@@ -10,6 +10,10 @@ html,
         "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 input[type="range"] {
     display: block;
     -webkit-appearance: none;
@@ -35,6 +39,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1);
 }
 
-.click-event {
-    pointer-events: none;
+.item {
+    color: white;
 }
