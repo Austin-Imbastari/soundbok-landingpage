@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from "react";
-import { Environment, OrbitControls, ContactShadows } from "@react-three/drei";
+import { Environment, OrbitControls, ContactShadows, PresentationControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { HexColorPicker } from "react-colorful";
 import SoundBok from "../Soundbok/Soundbok";
@@ -64,7 +64,16 @@ const Configure = () => {
                 <directionalLight intensity={3} castShadow />
                 <ambientLight intensity={2.5} />
                 <Environment preset='studio' />
-                <SoundBokConfig />
+                <PresentationControls
+                    global
+                    rotation={[0, -0.5, 0]}
+                    config={{ mass: 2, tension: 500 }}
+                    snap={{ mass: 8, tension: 100 }}
+                    polar={[-Math.PI / 3, Math.PI / 3]}
+                    azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+                >
+                    <SoundBokConfig />
+                </PresentationControls>
                 <ContactShadows position-y={-2.5} opacity={0.4} scale={5} blur={4.4} />
             </Canvas>
 

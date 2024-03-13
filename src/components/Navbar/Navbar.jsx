@@ -12,7 +12,7 @@ const Navbar = () => {
             console.log(currentPosition);
 
             if (currentPosition > threshold) {
-                setColor("#ffff");
+                setColor("#ffffff");
             } else {
                 setColor("#2d2928");
             }
