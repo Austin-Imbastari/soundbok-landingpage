@@ -18,7 +18,7 @@ A 3D interactive website I created because I love SoundBoks company and the blue
 - https://soundboks-configuration.netlify.app/
 
 ## Preview
-![Jan-15-2023 21-36-23](https://user-images.githubusercontent.com/55529532/212605804-6091b766-db49-4fe9-832a-8f66ac414b33.gif)
+- ![soundboks](https://github.com/Austin-Imbastari/soundbok-landingpage/assets/55529532/216c790c-7ce9-40f7-af6e-0bb9012b311f)
 
 ## Features
 - User can configure SoundBoks with different colors. (Grill, Volume Knob, Strap, & Body)
