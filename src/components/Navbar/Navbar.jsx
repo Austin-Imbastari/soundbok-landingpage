@@ -36,14 +36,14 @@ const Navbar = () => {
 
                 <LinkList>
                     <ul>
-                        <a style={{ color: color }} href='#'>
+                        <a target='_blank' style={{ color: color }} href='https://soundboks.com/story'>
                             <li>Story</li>
                         </a>
-                        <a style={{ color: color }} href='#'>
+                        {/* <a style={{ color: color }} href='#'>
                             <li>Configure</li>
-                        </a>
-                        <a style={{ color: color }} href='#'>
-                            <li>About</li>
+                        </a> */}
+                        <a target='_blank' style={{ color: color }} href='https://soundboks.com/products'>
+                            <li>Products</li>
                         </a>
                     </ul>
                 </LinkList>
