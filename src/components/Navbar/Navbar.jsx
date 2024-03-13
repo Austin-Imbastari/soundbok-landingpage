@@ -1,8 +1,30 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Navbar = () => {
+    const [color, setColor] = useState("#2d2928");
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const threshold = 810;
+            const currentPosition = window.scrollY;
+            console.log(currentPosition);
+
+            if (currentPosition > threshold) {
+                setColor("#ffff");
+            } else {
+                setColor("#2d2928");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <NavContainer>
@@ -14,13 +36,13 @@ const Navbar = () => {
 
                 <LinkList>
                     <ul>
-                        <a href='#'>
+                        <a style={{ color: color }} href='#'>
                             <li>Story</li>
                         </a>
-                        <a href='#'>
+                        <a style={{ color: color }} href='#'>
                             <li>Configure</li>
                         </a>
-                        <a href='#'>
+                        <a style={{ color: color }} href='#'>
                             <li>About</li>
                         </a>
                     </ul>
@@ -28,7 +50,7 @@ const Navbar = () => {
 
                 <div>
                     <a target='_blank' href='https://soundboks.com/products/speakers/soundboks-go'>
-                        <button>Purchase</button>
+                        <button style={{ border: `1px solid ${color} ` }}>Purchase</button>
                     </a>
                 </div>
             </NavContainer>
@@ -88,15 +110,14 @@ const LinkList = styled.div`
         display: inline-block;
         margin-right: 50px;
         cursor: pointer;
-        color: #2d2928;
         font-size: 1.2rem;
         letter-spacing: 1.2px;
         font-weight: 600;
+        /* color: #2d2928; */
         /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
 
         a {
             text-decoration: none;
-            color: #2d2928;
         }
     }
 `;

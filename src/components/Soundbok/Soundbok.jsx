@@ -76,6 +76,11 @@ function SoundBok(props) {
                         }}
                     />
                     <mesh
+                        onPointerDown={(e) => {
+                            // Handle click event for this mesh
+                            e.stopPropagation();
+                            state.current = null;
+                        }}
                         receiveShadow
                         castShadow
                         geometry={nodes.Cube_4.geometry}
@@ -94,6 +99,11 @@ function SoundBok(props) {
                     />
                 </group>
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = null;
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_6.geometry}
