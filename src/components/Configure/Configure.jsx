@@ -53,7 +53,7 @@ const ColorPicker = () => {
 const Configure = () => {
     return (
         <>
-            <Canvas shadows flat>
+            <Canvas camera={{ near: 0.01, far: 110, fov: 90 }} shadows flat>
                 <OrbitControls
                     minPolarAngle={Math.PI / 2}
                     maxPolarAngle={Math.PI / 2}
