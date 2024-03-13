@@ -56,14 +56,24 @@ function SoundBok(props) {
                         castShadow
                         geometry={nodes.Cube_2.geometry}
                         material={materials.strapmaterial}
-                        material-color={snap.items.strapmaterial}
+                        material-color={snap.items.Strap}
+                        onPointerDown={(e) => {
+                            // Handle click event for this mesh
+                            e.stopPropagation();
+                            state.current = "Strap";
+                        }}
                     />
                     <mesh
                         receiveShadow
                         castShadow
                         geometry={nodes.Cube_3.geometry}
                         material={materials.volumeknobmaterial}
-                        material-color={snap.items.volumeknobmaterial}
+                        material-color={snap.items.VolumeKnob}
+                        onPointerDown={(e) => {
+                            // Handle click event for this mesh
+                            e.stopPropagation();
+                            state.current = "VolumeKnob";
+                        }}
                     />
                     <mesh
                         receiveShadow
@@ -90,22 +100,37 @@ function SoundBok(props) {
                     material={materials.bluetoothlightmaterial}
                 />
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "InnerGrill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_7.geometry}
-                    material={materials.innergrillmaterial}
+                    material={materials.InnerGrill}
                 />
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "InnerGrill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_8.geometry}
-                    material={materials.innergrillmaterial}
+                    material={materials.InnerGrill}
                 />
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "InnerGrill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_9.geometry}
-                    material={materials.innergrillmaterial}
+                    material={materials.InnerGrill}
                 />
             </group>
             <mesh
@@ -116,25 +141,35 @@ function SoundBok(props) {
                 position={[1.206, 1.675, 0.732]}
                 rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                 scale={0.262}
-                material-color={snap.items.logo}
+                material-color={snap.items.Logo}
                 onPointerDown={(e) => {
                     // Handle click event for this mesh
                     e.stopPropagation();
-                    state.current = "logo";
+                    state.current = "Logo";
                 }}
             />
             <group position={[1.011, 1.564, 0.892]} scale={[1, 1, 1.836]}>
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "InnerGrill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.InnerGrill_1.geometry}
-                    material={materials.innergrillmaterial}
+                    material={materials.InnerGrill}
                 />
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "InnerGrill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.InnerGrill_2.geometry}
-                    material-color={snap.items.innerGrill}
+                    material-color={snap.items.InnerGrill}
                 />
             </group>
             <group position={[1.098, 1.023, -0.701]} scale={[1, 1, 1.836]}>
@@ -150,11 +185,16 @@ function SoundBok(props) {
                     material={materials.basematerial}
                 />
                 <mesh
+                    onPointerDown={(e) => {
+                        // Handle click event for this mesh
+                        e.stopPropagation();
+                        state.current = "Grill";
+                    }}
                     receiveShadow
                     castShadow
                     geometry={nodes.OuterGrill_2.geometry}
                     material={materials.outergrillmaterial}
-                    material-color={snap.items.outergrillmaterial}
+                    material-color={snap.items.Grill}
                 />
             </group>
         </group>
