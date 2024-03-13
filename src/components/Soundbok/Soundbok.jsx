@@ -41,13 +41,13 @@ function SoundBok(props) {
                     onPointerDown={(e) => {
                         // Handle click event for this mesh
                         e.stopPropagation();
-                        state.current = "body";
+                        state.current = "Body";
                     }}
                     receiveShadow
                     castShadow
                     geometry={nodes.Cube_1.geometry}
                     material={materials.basematerial}
-                    material-color={snap.items.body}
+                    material-color={snap.items.Body}
                 />
 
                 <group>

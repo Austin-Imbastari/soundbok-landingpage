@@ -61,7 +61,7 @@ const Configure = () => {
                     enablePan={false}
                 />
                 <color attach='background' args={["#2D2928"]} />
-                <directionalLight intensity={4} castShadow />
+                <directionalLight intensity={3} castShadow />
                 <ambientLight intensity={2.5} />
                 <Environment preset='studio' />
                 <SoundBokConfig />
