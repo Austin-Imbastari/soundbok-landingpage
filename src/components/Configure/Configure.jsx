@@ -68,7 +68,7 @@ const Configure = () => {
                     global
                     rotation={[0, -0.5, 0]}
                     config={{ mass: 2, tension: 500 }}
-                    snap={{ mass: 8, tension: 100 }}
+                    // snap={{ mass: 8, tension: 100 }}
                     polar={[-Math.PI / 3, Math.PI / 3]}
                     azimuth={[-Math.PI / 1.4, Math.PI / 2]}
                 >
