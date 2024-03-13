@@ -42,3 +42,15 @@ input[type="range"]::-webkit-slider-thumb:active {
 .item {
     color: white;
 }
+
+.annotation {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 300;
+    background: rgba(24, 24, 24, 0.454);
+    color: #f0f0f0;
+    padding: 10px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}

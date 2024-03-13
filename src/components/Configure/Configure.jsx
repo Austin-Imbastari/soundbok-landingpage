@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from "react";
-import { Environment, OrbitControls, ContactShadows, PresentationControls } from "@react-three/drei";
+import { Environment, OrbitControls, ContactShadows, PresentationControls, Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { HexColorPicker } from "react-colorful";
 import SoundBok from "../Soundbok/Soundbok";
@@ -74,6 +74,11 @@ const Configure = () => {
                 >
                     <SoundBokConfig />
                 </PresentationControls>
+                <Html scale={0.5} position={[0, 2, 0]} transform occlude>
+                    <div className='annotation'>
+                        <span style={{ fontSize: "1.1rem" }}>Click on the different parts of the Soundboks</span>
+                    </div>
+                </Html>
                 <ContactShadows position-y={-2.5} opacity={0.4} scale={5} blur={4.4} />
             </Canvas>
 
