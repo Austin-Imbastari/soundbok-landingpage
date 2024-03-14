@@ -9,7 +9,6 @@ const Navbar = () => {
         const handleScroll = () => {
             const threshold = 810;
             const currentPosition = window.scrollY;
-            console.log(currentPosition);
 
             if (currentPosition > threshold) {
                 setColor("#ffffff");
