@@ -1,10 +1,21 @@
 import styled from "styled-components";
 import Logo from "../../assets/soundboksSvg.svg?react";
+import { motion } from "framer-motion";
 
 const Overlay = () => {
     return (
         <>
-            <TopLeft>
+            <TopLeft
+                animate={{
+                    opacity: 1,
+                    transition: {
+                        duration: 2,
+                    },
+                }}
+                initial={{
+                    opacity: 0,
+                }}
+            >
                 <h1>
                     CONNECTING PEOPLE <br />
                     THROUGH THE <span>—</span>
@@ -34,7 +45,7 @@ const Overlay = () => {
 
 export default Overlay;
 
-const TopLeft = styled.div`
+const TopLeft = styled(motion.div)`
     position: absolute;
     top: 10vw;
     left: 5vw;
