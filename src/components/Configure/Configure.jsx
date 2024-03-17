@@ -21,7 +21,6 @@ const SoundBokConfig = ({ setColor, color }) => {
         -Math.PI * 0.5;
     });
 
-    console.log(color);
     return (
         <mesh ref={bok}>
             <SoundBok />

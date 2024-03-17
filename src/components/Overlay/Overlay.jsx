@@ -3,19 +3,19 @@ import Logo from "../../assets/soundboksSvg.svg?react";
 import { motion } from "framer-motion";
 
 const Overlay = () => {
+    const titleAnim = {
+        hidden: {
+            opacity: 0,
+        },
+        show: {
+            opacity: 1,
+            transition: { duration: 2 },
+        },
+    };
+
     return (
         <>
-            <TopLeft
-                animate={{
-                    opacity: 1,
-                    transition: {
-                        duration: 2,
-                    },
-                }}
-                initial={{
-                    opacity: 0,
-                }}
-            >
+            <TopLeft variants={titleAnim} initial='hidden' animate='show'>
                 <h1>
                     CONNECTING PEOPLE <br />
                     THROUGH THE <span>—</span>
@@ -56,21 +56,21 @@ const TopLeft = styled(motion.div)`
         line-height: 1.45em;
         font-size: 4rem;
         color: #2d2928;
-        /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
+        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
     }
 
     p {
         font-size: 1rem;
         line-height: 1.5em;
         color: #2d2928;
-        /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
+        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
     }
 
     span {
         margin-left: 5rem;
         font-weight: 200;
         color: #2d2928;
-        /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
+        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
     }
 `;
 
@@ -84,7 +84,7 @@ export const Arrow = styled.div`
     a {
         text-decoration: none;
         color: #2d2928;
-        /* text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white; */
+        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
     }
 `;
 
