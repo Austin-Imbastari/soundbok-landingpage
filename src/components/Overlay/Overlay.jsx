@@ -3,20 +3,20 @@ import Logo from "../../assets/soundboksSvg.svg?react";
 import { motion } from "framer-motion";
 
 const Overlay = () => {
-    const titleAnim = {
-        hidden: {
-            opacity: 0,
-        },
-        show: {
-            opacity: 1,
-            transition: { duration: 2 },
-        },
-    };
+    // const titleAnim = {
+    //     hidden: {
+    //         opacity: 0,
+    //     },
+    //     show: {
+    //         opacity: 1,
+    //         transition: { duration: 2 },
+    //     },
+    // };
 
     return (
         <>
             <Container>
-                <TopLeft variants={titleAnim} initial='hidden' animate='show'>
+                <TopLeft>
                     <h1>
                         CONNECTING PEOPLE <br />
                         THROUGH THE <span>—</span>
