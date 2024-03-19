@@ -69,6 +69,8 @@ const NavContainer = styled.div`
     margin-left: 100px;
     margin-right: 100px;
     z-index: 69;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
 
     h1 {
         /* border: 1px solid red; */

@@ -15,35 +15,41 @@ const Overlay = () => {
 
     return (
         <>
-            <TopLeft variants={titleAnim} initial='hidden' animate='show'>
-                <h1>
-                    CONNECTING PEOPLE <br />
-                    THROUGH THE <span>—</span>
-                    <br />
-                    POWER OF SOUND
-                </h1>
+            <Container>
+                <TopLeft variants={titleAnim} initial='hidden' animate='show'>
+                    <h1>
+                        CONNECTING PEOPLE <br />
+                        THROUGH THE <span>—</span>
+                        <br />
+                        POWER OF SOUND
+                    </h1>
 
-                <p>
-                    Turn up with the worlds most powerful <br />
-                    Bluetooth speaker! —
-                </p>
-            </TopLeft>
-            <BottomRight>
-                <Arrow>
-                    <a href='#'>
-                        <h1>TURN UP &#x2192;</h1>
-                    </a>
-                </Arrow>
-                <Logo />
-            </BottomRight>
-            <BottomLeft>
-                <p>Whenever and wherever you want to party, SOUNDBOKS has you covered.</p>
-            </BottomLeft>
+                    <p>
+                        Turn up with the worlds most powerful <br />
+                        Bluetooth speaker! —
+                    </p>
+                </TopLeft>
+                <BottomRight>
+                    <Arrow>
+                        <a href='#'>
+                            <h1>TURN UP &#x2192;</h1>
+                        </a>
+                    </Arrow>
+                    <Logo />
+                </BottomRight>
+                <BottomLeft>
+                    <p>Whenever and wherever you want to party, SOUNDBOKS has you covered.</p>
+                </BottomLeft>
+            </Container>
         </>
     );
 };
 
 export default Overlay;
+
+const Container = styled.div`
+    font-family: "Clash Display", sans-serif;
+`;
 
 const TopLeft = styled(motion.div)`
     position: absolute;
@@ -58,14 +64,18 @@ const TopLeft = styled(motion.div)`
         color: #2d2928;
         mix-blend-mode: difference;
         color: white;
+        font-weight: 600;
     }
 
     p {
+        /* border: 1px solid red; */
         font-size: 1rem;
         line-height: 1.5em;
         color: #2d2928;
         mix-blend-mode: difference;
         color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
     }
 
     span {
@@ -78,11 +88,10 @@ const TopLeft = styled(motion.div)`
 `;
 
 export const Arrow = styled.div`
-    /* border: 1px solid red; */
     position: absolute;
     bottom: 19.5vw;
     right: 39vw;
-    width: 100%;
+    width: 20%;
     font-size: 0.5rem;
     a {
         text-decoration: none;
@@ -113,5 +122,7 @@ export const BottomLeft = styled.div`
         letter-spacing: 1px;
         mix-blend-mode: difference;
         color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
     }
 `;

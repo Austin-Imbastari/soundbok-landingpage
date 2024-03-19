@@ -73,7 +73,7 @@ const Configure = () => {
                 >
                     <SoundBokConfig />
                 </PresentationControls>
-                <Html scale={0.5} position={[0, 2, 0]} transform occlude>
+                <Html style={{ fontFamily: "Clash Display" }} scale={0.5} position={[0, 2, 0]} transform occlude>
                     <div className='annotation'>
                         <span style={{ fontSize: "1.1rem" }}>Click on the different parts of the Soundboks</span>
                     </div>
