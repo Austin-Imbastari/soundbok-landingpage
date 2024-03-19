@@ -56,21 +56,24 @@ const TopLeft = styled(motion.div)`
         line-height: 1.45em;
         font-size: 4rem;
         color: #2d2928;
-        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+        mix-blend-mode: difference;
+        color: white;
     }
 
     p {
         font-size: 1rem;
         line-height: 1.5em;
         color: #2d2928;
-        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+        mix-blend-mode: difference;
+        color: white;
     }
 
     span {
         margin-left: 5rem;
         font-weight: 200;
         color: #2d2928;
-        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+        mix-blend-mode: difference;
+        color: white;
     }
 `;
 
@@ -84,7 +87,8 @@ export const Arrow = styled.div`
     a {
         text-decoration: none;
         color: #2d2928;
-        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+        mix-blend-mode: difference;
+        color: white;
     }
 `;
 
@@ -107,5 +111,7 @@ export const BottomLeft = styled.div`
         font-size: 1rem;
         font-weight: 300;
         letter-spacing: 1px;
+        mix-blend-mode: difference;
+        color: white;
     }
 `;

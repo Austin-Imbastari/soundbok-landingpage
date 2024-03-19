@@ -74,12 +74,11 @@ const NavContainer = styled.div`
         /* border: 1px solid red; */
         font-size: 2rem;
         font-weight: 900;
-        color: #2d2928;
-        /* text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72); */
-
+        mix-blend-mode: difference;
+        color: white;
         a {
             text-decoration: none;
-            color: #2d2928;
+            /* color: #2d2928; */
             /* text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72); */
         }
     }
@@ -114,10 +113,11 @@ const LinkList = styled.div`
         letter-spacing: 1.2px;
         font-weight: 600;
         /* color: #2d2928; */
-        text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+
         a {
             text-decoration: none;
-            text-shadow: 3px 1px 4px rgba(255, 255, 255, 0.72);
+            mix-blend-mode: difference;
+            color: white;
         }
     }
 `;
